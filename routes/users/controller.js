@@ -7,14 +7,16 @@ module.exports = {
         const {
             name,
             email,
-            password
+            password,
+            hobbies
         } = req.body
 
         try {
             const user = await User.create({
                 name,
                 email,
-                password
+                password,
+                hobbies
             })
 
             res.send({
